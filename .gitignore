@@ -3,3 +3,5 @@
 .floydignore
 .floyddata
 .python-version
+.idea/
+.idea/*
