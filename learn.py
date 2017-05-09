@@ -55,7 +55,7 @@ def main(args):
     classifier = tf.contrib.learn.DNNClassifier(feature_columns=feature_columns,
                                                 hidden_units=[10, 20, 10],
                                                 n_classes=3,
-                                                model_dir="/iris_model")
+                                                model_dir="/output")
 
     def get_train_inputs():
         x = tf.constant(x_train)
