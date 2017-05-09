@@ -35,7 +35,7 @@ def load_iris():
     target_names = ["setosa", "versicolor", "virginica"]    
     """
 
-    iris = pd.read_csv("dataset/iris.data", header=None)
+    iris = pd.read_csv("/dataset/iris.data", header=None)
     iris = iris.replace({"Iris-setosa": 0, "Iris-versicolor": 1, "Iris-virginica": 2})
     dataset = Bunch()
     dataset.data = iris.as_matrix([0, 1, 2, 3]).astype(np.float32)
@@ -55,7 +55,7 @@ def main(args):
     classifier = tf.contrib.learn.DNNClassifier(feature_columns=feature_columns,
                                                 hidden_units=[10, 20, 10],
                                                 n_classes=3,
-                                                model_dir="iris_model")
+                                                model_dir="/iris_model")
 
     def get_train_inputs():
         x = tf.constant(x_train)
