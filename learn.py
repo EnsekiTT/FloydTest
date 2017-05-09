@@ -25,7 +25,7 @@ import tensorflow as tf
 
 def load_iris():
     pass
-    
+
 
 def main(unused_argv):
     # Load dataset.
